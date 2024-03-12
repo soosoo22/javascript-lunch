@@ -51,18 +51,23 @@ const root = {
         const field = item.children[1] as Select | TextArea | Input;
         return field.getValue();
       });
+
       const newRestaurant: RestaurantType = {
         category: fieldValues[0] as CategoryType,
-        name: fieldValues[1] as string,
+        name: fieldValues[1],
         distance: Number(fieldValues[2]),
         introduction: fieldValues[3],
         link: fieldValues[4],
       };
 
-      matzip.add(newRestaurant);
-      storage.addData(newRestaurant);
-      $('.modal')?.classList.remove('modal--open');
-      $('.restaurant-list-container')?.appendChild(new Restaurant(newRestaurant));
+      try {
+        matzip.add(newRestaurant);
+        storage.addData(newRestaurant);
+        $('.modal')?.classList.remove('modal--open');
+        $('.restaurant-list-container')?.appendChild(new Restaurant(newRestaurant));
+      } catch (error) {
+        alert(error);
+      }
     });
   },
 };

@@ -11,6 +11,9 @@ import {
 import { Button } from './tag';
 
 import FormItem from './FormItem';
+import Condition from '../constants/Condition';
+
+const { CATEGORY, DISTANCE } = Condition;
 
 class RestaurantForm extends HTMLElement {
   constructor() {
@@ -29,17 +32,17 @@ class RestaurantForm extends HTMLElement {
 
   createCategoryField() {
     const label: LabelProps = {
-      htmlFor: 'category text-caption',
+      htmlFor: 'category',
       text: '카테고리',
     };
     const options: OptionProps[] = [
       { value: '', text: '선택해 주세요' },
-      { value: '한식', text: '한식' },
-      { value: '중식', text: '중식' },
-      { value: '일식', text: '일식' },
-      { value: '양식', text: '양식' },
-      { value: '아시안', text: '아시안' },
-      { value: '기타', text: '기타' },
+      { value: CATEGORY.KOREAN_FOOD, text: CATEGORY.KOREAN_FOOD },
+      { value: CATEGORY.CHINESE_FOOD, text: CATEGORY.CHINESE_FOOD },
+      { value: CATEGORY.JAPANESE_FOOD, text: CATEGORY.JAPANESE_FOOD },
+      { value: CATEGORY.WESTERN_FOOD, text: CATEGORY.WESTERN_FOOD },
+      { value: CATEGORY.ASIAN_FOOD, text: CATEGORY.ASIAN_FOOD },
+      { value: CATEGORY.ETC, text: CATEGORY.ETC },
     ];
     const select: SelectProps = {
       name: 'category',
@@ -59,7 +62,7 @@ class RestaurantForm extends HTMLElement {
 
   createRestaurantNameField() {
     const label: LabelProps = {
-      htmlFor: 'name text-caption',
+      htmlFor: 'name',
       text: '이름',
     };
 
@@ -81,16 +84,16 @@ class RestaurantForm extends HTMLElement {
 
   createDistanceField() {
     const label: LabelProps = {
-      htmlFor: 'distance text-caption',
+      htmlFor: 'distance',
       text: '거리(도보 이동 시간)',
     };
     const options: OptionProps[] = [
       { value: '', text: '선택해 주세요' },
-      { value: '5', text: '5분 내' },
-      { value: '10', text: '10분 내' },
-      { value: '15', text: '15분 내' },
-      { value: '20', text: '20분 내' },
-      { value: '30', text: '30분 내' },
+      { value: `${DISTANCE.FIVE}`, text: `${DISTANCE.FIVE}분 내` },
+      { value: `${DISTANCE.TEN}`, text: `${DISTANCE.TEN}분 내` },
+      { value: `${DISTANCE.FIFTEEN}`, text: `${DISTANCE.FIFTEEN}분 내` },
+      { value: `${DISTANCE.TWENTY}`, text: `${DISTANCE.TWENTY}분 내` },
+      { value: `${DISTANCE.THIRTY}`, text: `${DISTANCE.THIRTY}분 내` },
     ];
     const select: SelectProps = {
       name: 'distance',
@@ -110,7 +113,7 @@ class RestaurantForm extends HTMLElement {
 
   createDescriptionField() {
     const label: LabelProps = {
-      htmlFor: 'description text-caption',
+      htmlFor: 'description',
       text: '설명',
     };
 
@@ -138,7 +141,7 @@ class RestaurantForm extends HTMLElement {
 
   createLinkField() {
     const label: LabelProps = {
-      htmlFor: 'link text-caption',
+      htmlFor: 'link',
       text: '참고 링크',
     };
 
@@ -168,7 +171,7 @@ class RestaurantForm extends HTMLElement {
     buttonContainer.setAttribute('class', 'button-container');
 
     const cancelButton: ButtonProps = {
-      type: 'button',
+      type: 'reset',
       classnames: ['button', 'button--secondary', 'text-caption', 'modal--close'],
       children: '취소하기',
     };
