@@ -26,6 +26,3 @@ const DOM = {
 };
 
 export default DOM;
-
-export const $ = (selector: string, target: HTMLElement | HTMLImageElement | Document = document) =>
-  target.querySelector(selector);

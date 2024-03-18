@@ -24,7 +24,7 @@ export const CATEGORY_IMAGE: Record<CategoryType, string> = {
 import DOM from '../utils/DOM';
 import RestaurantDetail from './RestaurantDetail';
 
-const { $, $$ } = DOM;
+const { $ } = DOM;
 
 export interface FavoriteRestaurantEvent extends CustomEvent {
   detail: {

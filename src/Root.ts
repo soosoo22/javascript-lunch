@@ -12,7 +12,6 @@ const { $, $$ } = DOM;
 
 const root = {
   init() {
-    //storage.setMockData();
     const matzip = new Matzip(storage.getData());
     this.initList(matzip);
     this.listenCategoryChange(matzip);

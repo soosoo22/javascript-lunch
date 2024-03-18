@@ -1,7 +1,5 @@
 import DOM from '../utils/DOM';
 import RestaurantForm from './RestaurantForm';
-import { Restaurant } from '../types';
-import RestaurantDetail from './RestaurantDetail';
 
 const { $ } = DOM;
 
