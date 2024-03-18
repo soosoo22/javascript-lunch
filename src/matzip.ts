@@ -17,6 +17,23 @@ class Matzip implements MatzipInterface {
     this.restaurants.push(restaurant);
   }
 
+<<<<<<< HEAD
+=======
+  delete(restaurant: Restaurant) {
+    const newRestaurants = this.restaurants.filter((item) => {
+      return item.name !== restaurant.name;
+    });
+
+    this.restaurants = newRestaurants;
+  }
+
+  change(restaurant: Restaurant) {
+    this.restaurants.forEach((item) => {
+      if (item.name === restaurant.name) return (item.favorite = restaurant.favorite);
+    });
+  }
+
+>>>>>>> step2
   filterAndSort(category: CategoryType, sortBy: SortType) {
     if (category === '전체') return this.sort(sortBy, this.restaurants);
     const filterResult = [...this.restaurants].filter(
@@ -40,6 +57,7 @@ class Matzip implements MatzipInterface {
   }
 
   sortByName(a: Restaurant, b: Restaurant) {
+<<<<<<< HEAD
     if (a.name < b.name) {
       return -1;
     }
@@ -57,6 +75,13 @@ class Matzip implements MatzipInterface {
       return 1;
     }
     return 0;
+=======
+    return a.name.localeCompare(b.name);
+  }
+
+  sortByDistance(a: Restaurant, b: Restaurant) {
+    return a.distance - b.distance;
+>>>>>>> step2
   }
 
   addValidate(restaurant: Restaurant) {

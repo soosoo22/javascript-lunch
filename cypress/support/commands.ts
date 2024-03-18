@@ -1,4 +1,8 @@
 /// <reference types="cypress" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> step2
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -34,4 +38,8 @@
 //       visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
 //     }
 //   }
+<<<<<<< HEAD
 // }
+=======
+// }
+>>>>>>> step2

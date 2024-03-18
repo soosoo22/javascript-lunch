@@ -6,6 +6,10 @@ type Restaurant = {
   distance: number;
   introduction?: string;
   link?: string;
+<<<<<<< HEAD
+=======
+  favorite?: boolean;
+>>>>>>> step2
 };
 
 export default Restaurant;

@@ -7,3 +7,7 @@ export { default as CategoryKorean } from './category-korean.png';
 export { default as CategoryWestern } from './category-western.png';
 export { default as FavoriteIconFilled } from './favorite-icon-filled.png';
 export { default as FavoriteIconLined } from './favorite-icon-Lined.png';
+<<<<<<< HEAD
+=======
+export { default as ArrowIcon } from './chevron-down.png';
+>>>>>>> step2

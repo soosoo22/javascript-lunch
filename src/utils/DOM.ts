@@ -5,10 +5,17 @@ function validateSelector(selector: string) {
 }
 
 const DOM = {
+<<<<<<< HEAD
   $: (selector: string) => {
     try {
       validateSelector(selector);
       return document.querySelector(selector);
+=======
+  $: (selector: string, target: HTMLElement | Document = document) => {
+    try {
+      validateSelector(selector);
+      return target.querySelector(selector);
+>>>>>>> step2
     } catch (error) {
       alert(error);
       return;

@@ -34,7 +34,11 @@ class Header extends HTMLElement {
 
   openModal() {
     $('.gnb__button')?.addEventListener('click', () => {
+<<<<<<< HEAD
       $('.modal')?.classList.add('modal--open');
+=======
+      $('.restaurant-form-modal')?.classList.add('modal--open');
+>>>>>>> step2
     });
   }
 }
