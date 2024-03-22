@@ -1,5 +1,4 @@
 import { Restaurant as RestaurantType, CategoryType } from '../types/index';
-
 import {
   CategoryAsian,
   CategoryChinese,
@@ -10,6 +9,8 @@ import {
   FavoriteIconFilled,
   FavoriteIconLined,
 } from '../asset/img/index';
+import DOM from '../utils/DOM';
+import RestaurantDetail from './RestaurantDetail';
 
 export const CATEGORY_IMAGE: Record<CategoryType, string> = {
   한식: CategoryKorean,
@@ -20,10 +21,6 @@ export const CATEGORY_IMAGE: Record<CategoryType, string> = {
   기타: CategoryEtc,
   전체: '',
 };
-
-import DOM from '../utils/DOM';
-import RestaurantDetail from './RestaurantDetail';
-
 const { $ } = DOM;
 
 export interface FavoriteRestaurantEvent extends CustomEvent {

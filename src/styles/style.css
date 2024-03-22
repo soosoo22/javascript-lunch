@@ -387,8 +387,7 @@ detail-info-container {
 }
 
 .restaurant__detail__description {
-  height: 400px;
-  overflow: overlay;
+  display: block;
 }
 
 .modal--open {
