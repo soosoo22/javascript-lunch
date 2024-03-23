@@ -25,7 +25,9 @@ const storage = {
   },
 
   updateData(matzip: Matzip) {
-    localStorage.setItem(MATZIP_DATA, JSON.stringify(matzip.getRestaurants()));
+    const newData = JSON.stringify(matzip.getRestaurants());
+
+    localStorage.setItem(MATZIP_DATA, newData);
   },
 
   setMockData() {

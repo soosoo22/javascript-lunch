@@ -27,7 +27,7 @@ class Matzip implements MatzipInterface {
 
   change(restaurant: Restaurant) {
     this.restaurants.forEach((item) => {
-      if (item.name === restaurant.name) return (item.favorite = restaurant.favorite);
+      if (item.name === restaurant.name) item.favorite = restaurant.favorite;
     });
   }
 

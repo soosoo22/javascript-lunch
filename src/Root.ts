@@ -5,7 +5,7 @@ import Restaurant, { FavoriteRestaurantEvent } from './components/Restaurant';
 import { CategoryType, SortType, Restaurant as RestaurantType } from './types';
 import storage from './storage';
 import { Select, Input, TextArea } from './components/tag';
-import RestaurantDetail, { RestaurantDetailEvent } from './components/RestaurantDetail';
+import { RestaurantDetailEvent } from './components/RestaurantDetail';
 import { FavoriteIconLined } from './asset/img';
 
 const { $, $$ } = DOM;
@@ -23,9 +23,9 @@ const root = {
   initList(matzip: Matzip) {
     document.addEventListener('DOMContentLoaded', () => {
       const initSort = $('#sorting-filter') as HTMLSelectElement;
-      const sortBy = initSort.options[initSort.selectedIndex].value;
+      const sortBy = initSort.options[initSort.selectedIndex].value as SortType;
 
-      matzip.filterAndSort('전체', sortBy as SortType).forEach((restaurant) => {
+      matzip.filterAndSort('전체', sortBy).forEach((restaurant) => {
         $('.restaurant-list-container')?.appendChild(new Restaurant(restaurant));
       });
 
@@ -83,7 +83,7 @@ const root = {
   },
 
   listenRestaurantDelete(matzip: Matzip) {
-    document.addEventListener('deleteRestuarantInfo', (event: Event) => {
+    document.addEventListener('deleteRestaurantInfo', (event: Event) => {
       const customEvent = event as RestaurantDetailEvent;
       const restaurantInfo = customEvent.detail.restaurant;
 

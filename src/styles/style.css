@@ -55,6 +55,11 @@ body {
   font-weight: 400;
 }
 
+/* select */
+.arrow-icon {
+  background: url('../asset/img/chevron-down.png') no-repeat right 10px center;
+}
+
 /* GNB ********************************************/
 .gnb {
   display: flex;
@@ -387,8 +392,7 @@ detail-info-container {
 }
 
 .restaurant__detail__description {
-  height: 400px;
-  overflow: overlay;
+  display: block;
 }
 
 .modal--open {

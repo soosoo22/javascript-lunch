@@ -11,6 +11,7 @@ class Select extends HTMLSelectElement {
     this.name = name;
     this.id = id;
     if (classname !== undefined) this.classList.add(classname);
+    //if (classname !== undefined) this.classList.add(classname, 'arrow-icon'); <- 추후 변경
     this.required = required;
     this.style.background = `url(${ArrowIcon}) no-repeat right 10px center`;
     this.addOptions(options);
