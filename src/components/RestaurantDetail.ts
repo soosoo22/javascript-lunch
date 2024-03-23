@@ -49,7 +49,7 @@ class RestaurantDetail extends HTMLElement {
 
   clickDeleteButton(restaurant: Restaurant) {
     $('.delete-btn', this)?.addEventListener('click', () => {
-      const deleteRestaurantInfo = new CustomEvent('deleteRestuarantInfo', {
+      const deleteRestaurantInfo = new CustomEvent('deleteRestaurantInfo', {
         detail: {
           restaurant,
         },
